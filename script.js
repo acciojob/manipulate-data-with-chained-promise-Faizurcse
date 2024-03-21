@@ -14,10 +14,13 @@ const p1 = new Promise((resolve,reject)=>{
 
 const p2 = new Promise((resolve,reject)=>{
 	setTimeout(()=>{
-	const newArr1 = arr.filter((i)=>{
+	const newArr1 = arr.map((i)=>{
 			if(i%2===0){
 				return (i * 2)
 			}
+		else{
+			return i
+		}
 		})
 		  resolve(newArr1)
 	},2000)
